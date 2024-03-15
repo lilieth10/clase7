@@ -55,7 +55,7 @@ console.assert(
 );
 
 console.assert(
-    validarDescripcionRegalo('bici') === '',
+    validarDescripcionRegalo('bicicleta') === '',
     'Validar descripcion regalo no funcionó con una descripción valida'
 
 )
