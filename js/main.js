@@ -50,11 +50,26 @@ document.querySelector('#enviar-carta').onclick = function(e) {
           $errorAnterior.remove();
         }
       }
+
+      if (contador === 0) {
+        // Esconder el formulario
+        $form.style.display = 'none';
+        
+        // Mostrar el elemento con id #exito
+        const $exito = document.querySelector('#exito');
+        $exito.style.display = 'block';
+      
+        // Redireccionar al usuario a wishlist.html después de 5 segundos
+        setTimeout(function() {
+          window.location.href = 'wishlist.html';
+        }, 5000); // 5000 milisegundos = 5 segundos
+      }
+      
     })
   
     return contador;
   }
-  
+
   function enviarFormulario(){
     document.querySelector('#exito').className = '';
     document.querySelector('#carta-a-santa').className = 'oculto';
